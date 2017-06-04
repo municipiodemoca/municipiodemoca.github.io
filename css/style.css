@@ -2090,7 +2090,7 @@ ul.social-icons li {
 }
 @media (max-width:1366px){
 .banner {
-	min-height: 670px;
+    min-height: 610px
 }
 }
 @media (max-width:1280px){

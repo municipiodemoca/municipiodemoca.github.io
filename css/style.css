@@ -194,7 +194,7 @@ input[type="submit"],input[type="reset"],.w3layouts_mail_grid_left2 a,.w3agile_s
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:730px;
+	min-height:720px;
 }
 .banner-full{
     background:url(../images/moca_noche.jpg) no-repeat 0px 0px;
@@ -203,7 +203,7 @@ input[type="submit"],input[type="reset"],.w3layouts_mail_grid_left2 a,.w3agile_s
     -moz-background-size:cover;
     -o-background-size:cover;
     -ms-background-size:cover;
-    min-height:730px;
+    min-height:720px;
 }
 .banner1{
 	background:url(../images/banner.jpg) no-repeat 0px 0px;

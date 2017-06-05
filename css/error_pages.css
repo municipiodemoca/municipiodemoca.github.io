@@ -302,8 +302,8 @@ a.btn-mod:focus{
 }
 .btn-mod.btn-glass:hover,
 .btn-mod.btn-glass:focus{
-    color: rgba(255,255,255, 1);
-    background: #fff;
+    color: #ffffff;
+    background: #000000;
 }
 
 .btn-mod.btn-border{

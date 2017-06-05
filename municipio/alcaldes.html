@@ -20,11 +20,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/vertical-rhythm.min.css" rel="stylesheet" type="text/css" media="all">
 <link href="../css/error_pages.css" rel="stylesheet" type="text/css" media="all">
-<!-- pop-up-script -->
-<link rel="stylesheet" href="../css/chocolat.css" type="text/css" media="screen" charset="utf-8">
-<!-- //pop-up-script -->
+<link rel="stylesheet" type="text/css" href="../css/lightcase.css">
 <!-- js -->
-<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- //js -->
 <!-- font-awesome icons -->
 <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
@@ -76,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<hi><a class="navbar-brand" href="index.html"><img width="100%" height="auto" src="../images/logo.png"></a></h1>
+					<hi><a class="navbar-brand" href="index.html"><img class="logo" width="100%" height="auto" src="../images/logo.png"></a></h1>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -212,7 +210,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<hr>
 		<h3><strong>Alcalde de Moca</strong></h3>
  	 <hr>
-<img src="../images/alcalde.png" alt=" " class="img-responsive img-center">
+ 	 <div class="post-img">
+<a href="../images/alcalde.png" data-rel="lightcase"><img src="../images/alcalde.png" alt=" " class="img-responsive img-center"></a>
+	</div>
 <p class="text-center"><strong>El Actual Alcalde de Moca es Jos&eacute; E. Avil&eacute;s Santiago desde el año 2001</strong></p>
 <div style="width: 64.3%;" class="center">
 <h5 style="text-align: left;" class="mb-10 mt-10"> Redes Sociales:</h5>
@@ -670,22 +670,23 @@ José E. Avilés Santiago
 		<a href="barrios/voladoras.html" rel="prev">&lt; Anterior</a>
 	</li>
 	<li class="next">
-		<a href="../fiestas/balseada.html" rel="#">Siguiente &gt;</a>
+		<a href="fiestas/balseada.html" rel="#">Siguiente &gt;</a>
 	</li>
 </ul>
 	</div>
 		</div>
-			<div class="clearfix"></div>
-			</div>
+			<div class="clearfix"></div/
 		</div>
 	</div>
 <!-- //portfolio -->
 <!-- pop-up-script -->
-<script src="../js/jquery.chocolat.js"></script>
-<script type="text/javascript" charset="utf-8">
-$(function() {
-	$('.view-seventh a').Chocolat();
-});
+<script type="text/javascript" src="../js/lightcase.js"></script>
+<script type="text/javascript" src="../js/jquery.events.touch.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('a[data-rel^=lightcase]').lightcase();
+		swipe: true
+	});
 </script>
 <!-- //pop-up-script -->
 
@@ -713,15 +714,6 @@ $(function() {
 							<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
 							<p>(787) 877-2270
 							<p>(787) 877-1280
-						</div>
-						<div class="col-md-4 footer-w3l-1">
-							<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-							<ul>
-								<li><a href="index.html">Inicio</a></li>
-								<li><a href="about.html">Sobre Moca</a></li>
-								<li><a href="contact.html">Contáctanos</a></li>
-								<li><a href="mailto:info@municipiodemoca.com">info@municipiodemoca.com</a></li>
-							</ul>
 						</div>
 							<div class="clearfix"></div>
 					</div>

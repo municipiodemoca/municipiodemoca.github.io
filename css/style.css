@@ -4,6 +4,18 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
 html, body{
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -12,7 +24,7 @@ html, body{
 }
 .img-center{
     display: block;
-    margin: auto;}
+    margin: auto;}    
 .btn-center{
     display: table;
     margin: auto;
@@ -156,7 +168,7 @@ input[type="submit"],input[type="reset"],.w3layouts_mail_grid_left2 a,.w3agile_s
 }
 
 .dropdown-submenu:hover>.dropdown-menu {
-    display: block;
+    
 }
 
 .dropdown-submenu>a:after {
@@ -194,7 +206,7 @@ input[type="submit"],input[type="reset"],.w3layouts_mail_grid_left2 a,.w3agile_s
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:720px;
+	min-height:670px;
 }
 .banner-full{
     background:url(../images/moca_noche.jpg) no-repeat 0px 0px;
@@ -203,7 +215,7 @@ input[type="submit"],input[type="reset"],.w3layouts_mail_grid_left2 a,.w3agile_s
     -moz-background-size:cover;
     -o-background-size:cover;
     -ms-background-size:cover;
-    min-height:720px;
+    min-height:662px;
 }
 .banner1{
 	background:url(../images/banner.jpg) no-repeat 0px 0px;
@@ -301,6 +313,11 @@ p.pgrid{
     text-decoration: none;
     background-color: #00f1ff;
 }
+.agile_short_dropdown > li > a:focus:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #00f1ff;
+}
 /*-- nav-effect --*/
 .menu__list {
 	position: relative;
@@ -390,7 +407,7 @@ p.pgrid{
 .agileits-contact-info ul li {
     display: inline-block;
     font-size: 14px;
-	color:#fff;
+    color:#fff;
 }
 .agileits-contact-info ul li span {
     margin-right: 10px;
@@ -407,38 +424,38 @@ p.pgrid{
     color: #fff;
 }
 .w3_agileits_social_media{
-	float:right;
+    float:right;
 }
 .w3_agileits_social_media ul li{
-	display: inline-block;
+    display: inline-block;
     font-weight: 600;
     margin: 0 1em;
 }
 .w3_agileits_social_media ul li a{
-	display:block;
-	color:#fff;
-	text-decoration:none;
+    display:block;
+    color:#fff;
+    text-decoration:none;
 }
 .agileinfo_share{
     margin-right: 1em !important;
-	color:#fff;
+    color:#fff;
 }
 .w3_agileits_social_media ul li a.wthree_facebook:hover{
-	color:#3b5998;
+    color:#3b5998;
 }
 .w3_agileits_social_media ul li a.wthree_twitter:hover{
-	color:#1da1f2;
+    color:#1da1f2;
 }
 .w3_agileits_social_media ul li a.wthree_dribbble:hover{
-	color:#ea4c89;
+    color:#ea4c89;
 }
 .w3_agileits_social_media ul li a.wthree_behance:hover{
-	color:#1769ff;
+    color:#1769ff;
 }
 .w3l_banner_info{
-	width: 90%;
+    width: 90%;
     margin: 11em auto 0;
-	text-align:center;
+    text-align:center;
 }
 .agile-header {
     padding: 20px 0;
@@ -448,22 +465,20 @@ p.pgrid{
     color: #fff;
     font-size: 28px;
     text-transform: uppercase;
-    text-decoration: none;
-	letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 .wthree_banner_info_grid h3{
     color: #fff;
     font-size: 36px;
     text-transform: uppercase;
     margin:20px 0;
-	letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 .wthree_banner_info_grid h5 {
     color: #fff;
     font-size: 32px;
     text-transform: uppercase;
-    text-decoration: none;
-	letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 /*-- //banner --*/
 /*-- welcome --*/
@@ -1386,6 +1401,9 @@ table.table.table-striped,.table-bordered,.bs-docs-example {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
    filter: alpha(opacity=100);
    opacity: 1;
+    width: 400px;
+    height: 300px;
+    margin: -75px 0 0 -100px;
 }
 .view-seventh .mask {
    background-color:rgb(6, 201, 212);
@@ -1511,43 +1529,101 @@ table.table.table-striped,.table-bordered,.bs-docs-example {
     margin-top: 5em;
 }
 /*--contact--*/
-.contact-home {
-    width: 90%;
+.container-form {
+    max-width:700px;
+    width:100%;
+    height: auto;
+    margin:0 auto;
+    padding:0;
+    position:relative;
 }
-p.justify{
-    text-align: justify;
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+    background:#F9F9F9;
+    padding:10px;
+    margin:0px 0;
 }
-.margin-25{
-    margin: 25px;
-    text-align: center;
+
+#contact h3 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
 }
-a.button-contact{
-    color: #fff;
-    font-size: 17px;
-    padding: 4px 0px;
-    margin-top: 25px;
-    width: 15%;
-    padding: 5px;
-    margin: 15px;
-    background: #212121;
-    border: 2px solid #212121;
-    outline: none;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-    transition: 0.5s all;
+
+#contact h4 {
+    margin:5px 0 15px;
+    display:block;
+    font-size:13px;
 }
-a.button-contact:hover{
-    color:#fff;
-    background:#00f1ff;
-    border: 2px solid #00f1ff;
-    -webkit-transition:0.5s all;
-    -o-transition:0.5s all;
-    -moz-transition:0.5s all;
-    -ms-transition:0.5s all;
-    transition:0.5s all;
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
 }
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+    width:100%;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+}
+
+#contact textarea {
+    height:100px;
+    max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background:#0CF;
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+    background:#09C;
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+    outline:0;
+    border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
 .contact-right-w3-agile form {
     margin-top: 12px;
     color: #777;
@@ -1556,21 +1632,21 @@ a.button-contact:hover{
     background: transparent;
     border: 2px solid #212121;
     padding: 8px 22px;
-    width: 49%;
+    width: 49.42%;
     outline: none;
-	-webkit-transition:0.5s all;
-	-o-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-ms-transition:0.5s all;
-	transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+    transition:0.5s all;
 }
 .contact-right-w3-agile input[type="text"]:hover {
-	border-color:#00f1ff;
-	-webkit-transition:0.5s all;
-	-o-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-ms-transition:0.5s all;
-	transition:0.5s all;
+    border-color:#00f1ff;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+    transition:0.5s all;
 }
 .contact-right-w3-agile input[type="text"]:nth-child(1) {
     margin-right: 8px;
@@ -1583,20 +1659,20 @@ a.button-contact:hover{
     outline: none;
     resize: none;
     width: 100%;
-	height: 230px;
-	-webkit-transition:0.5s all;
-	-o-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-ms-transition:0.5s all;
-	transition:0.5s all;
+    height: 230px;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+    transition:0.5s all;
 }
 .contact-right-w3-agile textarea:hover {
-	border-color:#00f1ff;
-	-webkit-transition:0.5s all;
-	-o-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-ms-transition:0.5s all;
-	transition:0.5s all;
+    border-color:#00f1ff;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+    transition:0.5s all;
 }
 .contact-right-w3-agile form input[type="submit"] {
     color: #fff;
@@ -1614,14 +1690,14 @@ a.button-contact:hover{
     transition: 0.5s all;
 }
 .contact-right-w3-agile form input[type="submit"]:hover {
-	color:#fff;
-	background:#00f1ff;
-	border: 2px solid #00f1ff;
-	-webkit-transition:0.5s all;
-	-o-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-ms-transition:0.5s all;
-	transition:0.5s all;
+    color:#fff;
+    background:#00f1ff;
+    border: 2px solid #00f1ff;
+    -webkit-transition:0.5s all;
+    -o-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -ms-transition:0.5s all;
+    transition:0.5s all;
 }
 .contact-right-w3-agile label {
     width: 30px;
@@ -1644,17 +1720,17 @@ a.button-contact:hover{
 /*--contact--*/
 /*-- services --*/
 .agileits_w3layouts_service_grid{
-	width: 150px;
+    width: 150px;
     height: 150px;
     background: #34b3f5;
     border-radius: 100px;
     text-align: center;
     margin: 0 auto;
-	box-shadow: 0px 4px 5px #2285b9;
+    box-shadow: 0px 4px 5px #2285b9;
 }
 .agile_services_grid:hover .agileits_w3layouts_service_grid{
-	background:#00f1ff;
-	box-shadow:0px 4px 5px #00f1ff;
+    background:#00f1ff;
+    box-shadow:0px 4px 5px #00f1ff;
 }
 .w3_agileits_service_grid{
     border: 4px double #fff;
@@ -1667,15 +1743,15 @@ a.button-contact:hover{
     border: 4px double #212121;
 }
 .agileits_w3layouts_service_grid i{
-	font-size: 2em;
+    font-size: 2em;
     color: #212121;
     line-height: 3.4em;
 }
 .agile_services_grid:hover .agileits_w3layouts_service_grid i{
-	color:#fff;
+    color:#fff;
 }
 .agileits_w3layouts_service_grid span{
-	width: 5px;
+    width: 5px;
     height: 5px;
     background:#00f1ff;
     display: block;
@@ -1683,10 +1759,10 @@ a.button-contact:hover{
     border-radius: 25px;
 }
 .agile_services_grid:hover .agileits_w3layouts_service_grid span{
-	background:#212121;
+    background:#212121;
 }
 .agile_services_grid{
-	text-align:center;
+    text-align:center;
 }
 .agile_services_grid h4 {
     font-size: 22px;
@@ -1697,25 +1773,25 @@ a.button-contact:hover{
     line-height: 1.5em;
 }
 .agile_services_grid p{
-	color:#999;
-	line-height:2em;
-	margin-bottom:2.5em;
+    color:#999;
+    line-height:2em;
+    margin-bottom:2.5em;
 }
 .wthree_more a{
-	padding: 8px 35px;
+    padding: 8px 35px;
     border: 3px double #999;
     color: #212121;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
-	text-decoration:none;
+    text-decoration:none;
 }
 .wthree_more a:focus{
-	outline:none;
+    outline:none;
 }
 .wthree_more a:hover{
-	border-color:#00f1ff;
+    border-color:#00f1ff;
 }
 .services {
     padding: 5em 0;
@@ -2090,7 +2166,7 @@ ul.social-icons li {
 }
 @media (max-width:1366px){
 .banner {
-    min-height: 610px
+	min-height: 670px;
 }
 }
 @media (max-width:1280px){

@@ -19,11 +19,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../../css/vertical-rhythm.min.css" rel="stylesheet" type="text/css" media="all">
-<!-- pop-up-script -->
-<link rel="stylesheet" href="../../css/chocolat.css" type="text/css" media="screen" charset="utf-8">
-<!-- //pop-up-script -->
+<link rel="stylesheet" type="text/css" href="../../css/lightcase.css">
 <!-- js -->
-<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- //js -->
 <!-- font-awesome icons -->
 <link href="../../css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
@@ -212,8 +210,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<h3><strong>Balseada La Monserrate y el Tradicional Fangazo</strong></h3>
  	 <hr>
 <div class="row center">
-  <div class="col-sm-4"><img src="../../images/balseada-1.jpg" alt=" " class="img-responsive"></div>
-  <div class="col-sm-4"><img src="../../images/balseada-2.jpg" alt=" " class="img-responsive"></div>
+  <div class="col-sm-4"><a href="../../images/balseada-1.jpg" data-rel="lightcase:album"><img src="../../images/balseada-1.jpg" alt=" " class="img-responsive"></a></div>
+  <div class="col-sm-4"><a href="../../images/balseada-2.jpg" data-rel="lightcase:album"><img src="../../images/balseada-2.jpg" alt=" " class="img-responsive"></a></div>
 </div>
 <div class="attachmentsContainer">
 <hr>
@@ -241,11 +239,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 <!-- //portfolio -->
 <!-- pop-up-script -->
-<script src="../../js/jquery.chocolat.js"></script>
-<script type="text/javascript" charset="utf-8">
-$(function() {
-	$('.view-seventh a').Chocolat();
-});
+<script type="text/javascript" src="../../js/jquery.events.touch.js"></script>
+<script type="text/javascript" src="../../js/lightcase.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('a[data-rel^=lightcase]').lightcase();
+		swipe: true
+	});
 </script>
 <!-- //pop-up-script -->
 

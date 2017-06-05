@@ -18,10 +18,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/error_pages.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 <link href="css/vertical-rhythm.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/error_pages.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/lightcase.css">
+<!-- Social-feed css -->
+<link href="bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- //js -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
@@ -46,7 +50,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 <div class="fh5co-loader"></div>
 <!-- banner -->
-	<div class="banner-full">
+	<div class="banner">
 		<div class="container">
 			<div class="agile-header">
 				<div class="agileits-contact-info text-right">
@@ -66,6 +70,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			<script type="text/javascript">
+				(function($){
+				$(document).ready(function(){
+					$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+						event.preventDefault(); 
+						event.stopPropagation(); 
+						$(this).parent().siblings().removeClass('open');
+						$(this).parent().toggleClass('open');
+					});
+				});
+			})(jQuery);
+			</script>
 			<nav class="navbar navbar-default">
 				<div class="navbar-header navbar-left">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -76,25 +92,362 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</button>
 					<hi><a class="navbar-brand" href="index.html"><img width="100%" height="auto" src="images/logo.png"></a></h1>
 				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<nav class="menu menu--iris">
+						<ul class="nav navbar-nav menu__list">
+							<li class="menu__item menu__item--current"><a href="index.html" class="menu__link">Inicio</a></li>
+							<li class="dropdown menu__item">
+								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown">Sobre Moca <b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="municipio/historia.html">Historia</a></li>
+									<li><a href="municipio/simbolos.html">Símbolos</a></li>
+									<li class="divider"></li>
+									<li class="dropdown-submenu">
+                					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Barrios<i style="float: right; padding-right: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+                					<ul class="dropdown-menu agile_short_dropdown">
+                  					<li><a href="municipio/barrios/aceitunas.html">Aceitunas</a></li>
+                  					<li><a href="municipio/barrios/capa.html">Capa</a></li>
+                  					<li><a href="municipio/barrios/centro.html">Centro</a></li>
+                  					<li><a href="municipio/barrios/cerro-gordo.html">Cerro Gordo</a></li>
+                  					<li><a href="municipio/barrios/cruz.html">Cruz</a></li>
+                  					<li><a href="municipio/barrios/cuchillas.html">Cuchillas</a></li>
+                  					<li><a href="municipio/barrios/marias.html">Marías</a></li>
+                  					<li><a href="municipio/barrios/naranjo.html">Naranjo</a></li>
+                  					<li><a href="municipio/barrios/plata.html">Plata</a></li>
+                  					<li><a href="municipio/barrios/pueblo.html">Pueblo</a></li>
+                  					<li><a href="municipio/barrios/rocha.html">Rocha</a></li>
+                  					<li><a href="municipio/barrios/voladoras.html">Voladoras</a></li>
+									</ul>
+                    				<li><a href="municipio/alcaldes.html">Pasados Alcaldes</a></li>
+                    				<li class="dropdown dropdown-submenu">
+                					<a class="dropdown-toggle dropdown-submenu" data-toggle="dropdown" href="#">Fiestas y Festivales<i style="float: right; padding-right: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+                					<ul class="dropdown-menu agile_short_dropdown">
+                    				<li><a href="municipio/fiestas/balseada.html">Balseada y El<br>Tradicional Fangazo</a></li>
+                    				<li><a href="#">Caminata de Reyes</a></li>
+                    				<li><a href="#">Encendido de La Navidad</a></li>
+                    				<li><a href="#">Festival de Las Máscaras</a></li>
+                    				<li><a href="#">Festival de Los Reyes Magos</a></li>
+                    				<li><a href="#">Festival del Mundillo</a></li>
+                    				<li><a href="#">Misas de Aguinaldo</a></li>
+                    				<li><a href="#">Parranda de Máscaras</a></li>
+                    				<li><a href="#">Parranda Los enchaquetaos</a>
+									</li>
+									</ul>
+									<li><a href="#">Mocanos Distinguidos</a></li>
+									<li class="dropdown-submenu">
+                					<a class="dropdown-toggle dropdown-submenu" data-toggle="dropdown" href="#">Atractivos Turísticos&nbsp;&nbsp;<i style="float: right; padding-right: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+                					<ul class="dropdown-menu agile_short_dropdown">
+                    				<li><a href="#">El Merendero</a></li>
+                    				<li><a href="#">Hacienda la Enriqueta</a></li>
+                    				<li><a href="#">Monumento a la Tejedora<br>del Mundillo</a></li>
+                    				<li><a href="#">Museo del Mundillo</a></li>
+                    				<li><a href="#">Palacete Los Moreau</a></li>
+                    				<li><a href="#">Parque La Moca</a></li>
+                   					<li><a href="#">Parroquia Nuestra Señora<br>De La Monserrate</a></li>
+                    				<li><a href="#">Paseo Artesanal</a></li>
+									</li>
+									</ul>
+									<li class="dropdown-submenu">
+                					<a class="dropdown-toggle dropdown-submenu" data-toggle="dropdown" href="#">Ambiente<i style="float: right; padding-right: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+									<ul class="dropdown-menu agile_short_dropdown">
+                    				<li><a class="dropdown-toggle dropdown-submenu" href="#">Reciclaje (Aceite Bio-Diesel)</a></li>
+									</ul>
+									<li><a href="#">Descarga de Documentos</a></li>
+								</ul>
+									</li>
+							<li class="dropdown menu__item">
+								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown">Dependencias <b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="#">Compras</a></li>
+									<li><a href="#">Departamento de<br>Finanzas</a></li>
+									<li><a href="#">Obras Públicas</a></li>
+									<li><a href="#">Recursos Humanos</a></li>
+									<li><a href="#">Oficina de Auditoría<br>Interna</a></li>
+									<li><a href="#">Oficina de Ayuda al<br>Ciudadano</a></li>
+									<li><a href="#">Manejo de Emergencias</a></li>
+									<li><a href="#">Planificación y<br>Desarrollo</a></li>
+									<li><a href="#">Programas Federales</a></li>
+									<li><a href="#">Relaciones Públicas</a></li>
+									<li class="dropdown-submenu">
+                   					<a class="dropdown-toggle dropdown-submenu" data-toggle="dropdown" href="#">Secretaría Municipal<i style="float: right; padding-right: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    				<ul class="dropdown-menu agile_short_dropdown">
+                       				<li class="dropdown-submenu">
+                   					<a class="dropdown-toggle dropdown-submenu" data-toggle="dropdown" href="#">Licitadores<i style="float: right; padding-right: 10px;" class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    				<ul class="dropdown-menu agile_short_dropdown">
+                    				<li><a href="#">Registro de Licitadores</a></li>
+                    				</ul>
+                    				</ul>
+                    				<li><a href="#">Policía Municipal</a></li>
+									<li><a href="#">Recreación y Deportes</a></li>
+									<li><a href="#">Alcalde (Oficina)</a></li>
+									<li><a href="#">Turismo</a></li>
+								</ul>
+							</li>
+							<li class="menu__item"><a href="#" class="menu__link">Legislatura</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Centro Tecnológico</a></li>
+						</ul>
+					</nav>
+				</div>
+			</nav>
+			<style type="text/css">
+				.wthree_banner_info_grid {
+    				background: rgba(0, 0, 0, 0.73);
+    				padding: 30px;}
+    				p.pgrid {
+    				color: #ffffff;
+					}
+			</style>
 			<div class="w3l_banner_info">
-				<div class="hs-wrap">
-                    <div style="color: #fff;" class="hs-line-11 font-alt mb-10">
-                     	¡LO SENTIMOS!
-                    </div>
-                    <div style="color: #fff;" class="hs-line-4 no-transp font-alt mb-30">
-                        ¡EN ESTE MOMENTO ESTAMOS EN CONSTRUCCIÓN!
-                    </div>
-                    <div class="local-scroll">                                        
-                      <a href="index.html" class="btn btn-mod btn-w btn-round btn-small"><i class="fa fa-angle-left"></i> Back To Home Page</a>
-                    </div>
-                  </div>                                     
-                </div>
-            </div>			
-	<footer>
-			<div style="background: rgba(0, 0, 0, 0.73); text-align: center; padding: 10px;" class="copy-right-agile">
+				<section class="slider">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<div class="wthree_banner_info_grid">
+									<h4>Bienvenidos a Nuestro Municipio</h4>
+									<h3>"Mi pueblo es uno de gente humilde, trabajadora y con grandes sue&ntilde;os y aspiraciones"</h3>
+									<!--<h5>classical Latin</h5>-->
+								</div>
+							</li>
+							<li>
+								<div class="wthree_banner_info_grid">
+									<h4>Municipio de Moca</h4>
+									<h3>La Capital del Mundillo<br>"Un pueblo unido conserva grandes sueños"</h3>
+								</div>
+							</li>
+						</ul>
+				</section>
+				<!-- flexSlider -->
+					<script defer src="js/jquery.flexslider.js"></script>
+					<script type="text/javascript">
+						$(window).load(function(){
+							$('.flexslider').flexslider({
+								animation: "slide",
+								start: function(slider){
+								$('body').removeClass('loading');
+								}
+							  });
+							});
+					</script>
+				<!-- //flexSlider -->
+			</div>			
+		</div>
+			</div>
+				<div class="mouse-icon hidden-xs">
+			<div class="scroll"></div>
+			</div>
+	</div>
+<!-- //banner -->
+
+<!-- welcome -->
+<div class="welcome">
+	 <div class="container">
+		 <div class="welcome-top">
+			<h2 class="w3ls_head">Bienvenidos</h2>
+			
+			 <p>¡Reciban un caluroso saludo desde el Pueblo de Moca "La Capital del Mundillo" ! Dios ha bendecido a nuestro pueblo con personas maravillosas que han aportado al enriquecimiento y crecimiento de nuestro amado pueblo.
+
+			 Por tal razón hemos desarrollado esta página que contiene toda la información de nuestro pueblo. Estamos seguros que esta plataforma le ayudará a conocer más de nuestros servicios, nuestra gente y nuestra cultura.
+
+			 Esperamos muy pronto su visita, estamos seguros que disfrutarán de nuestra hospitalidad y de las cosas maravillosas que nos distinguen como pueblo. Sin duda alguna se llevarán gratos recuerdos de nuestro pueblo.</p>
+		 </div>		 
+	 </div>
+</div>
+<!-- //welcome -->
+<!--client-->
+	<div class="client">
+		<div class="container">
+			<h3 class="w3ls_head_2">¡Gracias por su visita!</h3>
+			<div class="container">
+			<div class="banner-grids">
+				<div class="col-md-8 banner-grid1">
+				
+				<h5 class="padding">"UN PUEBLO UNIDO CONSERVA GRANDES SUEÑOS"</h5>
+				<p class="pgrid">Esperamos que esta plataforma haya sido útil y de su agrado. Dicha plataforma es un logro más para nuestro pueblo; Nuestro Pueblo está en constante evolución y modernización, por esta razón nuestro municipio ha comenzado a integrarse con las plataformas sociales para facilitar la propagación de información, noticias, eventos y logros atravez de las plataformas sociales y por este medio.</p>
+			</div>
+			<div class="col-md-4 banner-grid">
+				<img src="images/alcalde.png" alt=" " class="img-responsive">
+			</div>
+				<div class="clearfix"></div>
+			</div>		
+		</div>
+		</div>
+	</div>	
+	<!--//client-->
+	<!-- what -->
+	<div class="what-w3ls">
+		<div class="container">
+			<h3 class="w3ls_head">¿CÓMO FUE SU EXPERIENCIA CON NOSOTROS?</h3>
+			<h4 style="font-size: 20px; color: #000000;" class="center mt-10 mb-10">¡Sugiéranos que está mal y vamos a trabajar en ello!</h4>
+			<p class="w3agile">Para Nuestro municipio es muy importante la opinión de nuestros residentes, visitantes y empleados, así que cualquier comentario o sugerencia acerca de este u otro servicio es bienvenida.</p>
+			<a data-rel="lightcase" href="#contact-us" class="btn btn-mod btn-glass btn-round btn-small mb-10 mt-10 btn-center"><i class="fa fa-envelope"></i> Enviar comentarios o sugerencias</a>
+				<div class="what-grids">
+					<div class="col-md-6 what-grid">
+						<img width="50%" height="auto" src="images/Escudo.jpg" class="img-responsive" alt=""/>
+						<div class="what-agile-info">
+							<h4>Agradeceremos toda sugerencia o comentario.</h4>
+							<p>Queremos saber que es importante para tí, qu&eacute; te gusta y qu&eacute; no. Recuerda siempre "Un pueblo unido conserva grandes sueños".</p>
+						</div>
+					</div>
+					<div class="col-md-6 what-grid1">
+						<div class="what-top">
+							<div class="what-left">
+								<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+							</div>
+							<div class="what-right">
+								<h4>Sugerencias y Comentarios</h4>
+								<p>Las sugerencias y comentarios son muy importantes para nosotros, las mismas nos ayudan cada d&iacute;a para mejorar nuestros servicios y plataformas.</p>
+							</div>
+								<div class="clearfix"></div>
+						</div>
+						<div class="what-top1">
+							<div class="what-left">
+								<i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i>
+							</div>
+							<div class="what-right">
+								<h4>¿Dudas o inquietudes?</h4>
+								<p>Si tienes alguna duda pregúntanos, responderemos a la brevedad posible. para nosotros es muy importante mantener al pueblo informado.</p>
+							</div>
+								<div class="clearfix"></div>
+						</div>
+						<div class="what-top1">
+							<div class="what-left">
+								<i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+							</div>
+							<div class="what-right">
+								<h4>¿Te encanta lo que hacemos?</h4>
+								<p>Cualquier comentario positivo tambi&eacute;n es bienvenido, si te gusta lo que hacemos h&aacute;znoslo saber, esto nos ayuda a seguir adelante.</p>
+							</div>
+								<div class="clearfix"></div>
+						</div>
+					</div>
+					<!-- contact -->
+					<div id="contact-us" style="display: none;">
+						<div class="container-form" style="	color:#777; background:#0CF">
+							<form id="contact" action="php/form.php" method="post" enctype="multipart/form-data">
+						    <h3>Contáctanos</h3>
+						    <h4>Recuerda que tu opini&oacute;n es muy inmportante para nosotros</h4>
+						    <fieldset>
+						      <input name="name" placeholder="Tu nombre" type="text" tabindex="1" required autofocus>
+						    </fieldset>
+						    <fieldset>
+						      <input name="email" placeholder="Tu correo electr&oacute;nico" type="email" tabindex="2" required>
+						    </fieldset>
+						    <fieldset>
+						      <input name="phone" placeholder="Tu n&uacute;mero de tel&eacute;fono" type="tel" tabindex="3">
+						    </fieldset>
+						    <fieldset>
+						      <textarea name="message" placeholder="Escribe tu mensaje...." tabindex="4" required></textarea>
+						    </fieldset>
+						    <fieldset>
+						      <button name="submit" type="submit" id="contact-submit" value="submit">Enviar</button>
+						    </fieldset>
+						  </form>
+						</div>
+					</div>
+					<!-- //contact -->
+					<div id="inline1" style="display: none;">
+						<h4 class="first">This content comes from a hidden element on that page</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet 					porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus. Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, 					vehicula non pretium varius, cursus ac tortor.</p>
+						<p>Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare, faucibus eu mi. 					Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel.</p>
+						</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+<!-- //what -->
+<!--client-->
+	<div class="client">
+		<div class="container">
+			<h3 class="w3ls_head">Client Says</h3>
+			<p class="w3l">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+				corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+			<div class="social-feed-container"></div>
+		</div>
+	</div>	
+	<!--//client-->	
+	    <!-- Codebird.js - required for TWITTER -->
+    <script src="bower_components/codebird-js/codebird.js"></script>
+    <!-- doT.js for rendering templates -->
+    <script src="bower_components/doT/doT.min.js"></script>
+    <!-- Moment.js for showing "time ago" -->
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <!-- Social-feed js -->
+    <script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
+    <script>
+<script>
+    $(document).ready(function(){
+        $('.social-feed-container').socialfeed({
+        	// FACEBOOK
+		    facebook:{
+		        accounts: ['@alcaldiamoca','!alcaldiamoca'],  //Array: Specify a list of accounts from which to pull wall posts
+		        limit: 2,                                   //Integer: max number of posts to load
+		        access_token: '188173785042942|177400cca39746072af86504da224913'  //String: "APP_ID|APP_SECRET"
+		    },
+		    // TWITTER
+		    twitter:{
+		        accounts: ['@municipiomoca'],                      //Array: Specify a list of accounts from which to pull tweets
+		        limit: 2,                                   //Integer: max number of tweets to load
+		        consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',          //String: consumer key. make sure to have your app read-only
+		        consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O' //String: consumer secret key. make sure to have your app read-only
+		     },
+
+            // GENERAL SETTINGS
+            length:400                                    //Integer: For posts with text longer than this length, show an ellipsis.
+        });
+    });
+</script>	
+<!-- pop-up-script -->
+<script type="text/javascript" src="js/jquery.events.touch.js"></script>
+<script type="text/javascript" src="js/lightcase.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('a[data-rel^=lightcase]').lightcase();
+		swipe: true
+	});
+</script>
+<!-- //pop-up-script -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-w3layouts">
+				<div class="clearfix"></div>
+			</div>
+			<div class="footer-w3-agile">
+				<div class="col-md-6 w3l-footer-top">
+					<h3>Noticias</h3>
+					<form action="#" method="post" class="newsletter">
+						<input class="email" type="email" placeholder="Su Correo Electrónico (Email)..." required="">
+						<input type="submit" class="submit"  value="">
+					</form>
+					<div class="footer-agile">
+						<div class="col-md-4 footer-w3-1">
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+							<p>Casa Alcaldía de Moca</p>
+							<p> Cll Calazan Lasalle</p>
+							<p> Moca, Puerto Rico 00676</p>
+						</div>
+						<div class="col-md-4 footer-w3l-1">
+							<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+							<p>(787) 877-2270</p>
+							<p>(787) 877-1280</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-4 w3ls-social-icons">
+					<h3>Síguenos</h3>
+					<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+					<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+					<a class="pinterest" href="#"><i class="fa fa-university"></i></a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="copy-right-agile">
 				<p>© 2017 Municipio de Moca. Todos Los Derechos Reservados | Diseño y Desarrollo Web por <a href="https://efrainvalentin.github.io/es/">Efraín J. Valentín</a></p>
 			</div>
-	</footer>
+		</div>
+	</div>
 <!-- //footer -->
 <!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>

@@ -373,30 +373,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Moment.js for showing "time ago" -->
     <script src="bower_components/moment/min/moment.min.js"></script>
     <!-- Social-feed js -->
-    <script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
-    <script>
-<script>
-    $(document).ready(function(){
-        $('.social-feed-container').socialfeed({
-        	// FACEBOOK
-		    facebook:{
-		        accounts: ['@alcaldiamoca','!alcaldiamoca'],  //Array: Specify a list of accounts from which to pull wall posts
-		        limit: 2,                                   //Integer: max number of posts to load
-		        access_token: '188173785042942|177400cca39746072af86504da224913'  //String: "APP_ID|APP_SECRET"
-		    },
-		    // TWITTER
-		    twitter:{
-		        accounts: ['@municipiomoca'],                      //Array: Specify a list of accounts from which to pull tweets
-		        limit: 2,                                   //Integer: max number of tweets to load
-		        consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',          //String: consumer key. make sure to have your app read-only
-		        consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O' //String: consumer secret key. make sure to have your app read-only
-		     },
-
-            // GENERAL SETTINGS
-            length:400                                    //Integer: For posts with text longer than this length, show an ellipsis.
-        });
-    });
-</script>	
+    <script src="js/jquery.socialfeed.js"></script>	
+    <script src="js/socialfeed.js"></script>	
 <!-- pop-up-script -->
 <script type="text/javascript" src="js/jquery.events.touch.js"></script>
 <script type="text/javascript" src="js/lightcase.js"></script>
